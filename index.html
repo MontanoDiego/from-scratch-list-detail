@@ -12,6 +12,8 @@
     <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
 
     <!-- js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+    ></script>
     <script type="module" src="app.js"></script>
 
     <!-- fonts -->
@@ -26,11 +28,21 @@
 
 <body>
     <header>
-        
+        <div>
+            <h1>THE LEGEND OF ZELDA</h1>
+            <h2> ITEMS </h2>
+        </div>
     </header>
 
     <main>
-
+        <section>
+            <div id="item-list-container">
+                <a class="item-card">
+                    <h3 id="item-name">Triforce</h3>
+                    <img id="item-img" src="https://static.wikia.nocookie.net/zelda/images/d/d5/Triforce_%28A_Link_to_the_Past%29.png/" alt-id="item name">
+                </a>
+            </div>
+        </section>
     </main>
 
 </body>

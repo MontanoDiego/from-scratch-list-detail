@@ -31,7 +31,7 @@ DETAIL PAGE
     - h1 title (details)
     - h2 light description (more about (span) item (span)!)
 -   Item: 
-    - div that contains the name (h2), detailed description of the item (p), the game that the item is from (p), and an image (img)
+    - div that contains the name (h2), detailed description of the item (p), the game that the item first appeared (p), and an image (img)
 
 ## State
 
