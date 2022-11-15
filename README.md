@@ -1,27 +1,89 @@
-## The Golden Rule:
+# Zelda Item Details
 
-🦸 🦸‍♂️ `Stop starting and start finishing.` 🏁
+​A web app that holds a list of important and iconic Zelda Items. Clicking on an item gives the user a separate page with more details.
+​
 
-If you work on more than one feature at a time, you are guaranteed to multiply your bugs and your anxiety.
+## Wireframe
 
-## Making a plan
+​
+![wireframe page 1]()
+![wireframe page 2]()
 
-1. **Make a drawing of your app. Simple "wireframes"**
-1. **Look at the drawing and name the HTML elements you'll need to realize your vision**
-1. **Look at the drawing and imagine using the app. What _state_ do you need to track?**
-1. **For each HTML element ask: Why do I need this? (i.e., "we need div to display the results in")**
-1. **Once we know _why_ we need each element, think about how to implement the "Why" as a "How" (i.e., `resultsEl.textContent = newResults`)**
-1. **Find all the 'events' (user clicks, form submit, on load etc) in your app. Ask one by one, "What happens when" for each of these events. Does any state change? Does any DOM update?**
-1. **Think about how to validate each of your features according to a Definition of Done. (Hint: console.log usually helps here.)**
-1. **Consider what features _depend_ on what other features. Use this dependency logic to figure out what order to complete tasks.**
+## HTML elements (stuff present upon page load)
 
-Additional considerations:
+HOME PAGE
 
--   Ask: which of your HTML elements need to be hard coded, and which need to be dynamically generated?
--   Consider your data model.
-    -   What kinds of objects (i.e., Dogs, Friends, Todos, etc) will you need?
-    -   What are the key/value pairs?
-    -   What arrays might you need?
-    -   What needs to live in a persistence layer?
--   Is there some state we need to initialize?
--   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+-   Menu Button
+    - h3 title
+    - img icon with anchor
+-   Header
+    - h1 title
+    - h2 light description
+-   Items
+    - div wrapped in anchor that contains image (img) and item name (h3)
+
+DETAIL PAGE
+
+-   Menu Button
+    - h3 title
+    - img icon with anchor
+-   Header
+    - h1 title (details)
+    - h2 light description (more about (span) item (span)!)
+-   Item: 
+    - div that contains the name (h2), detailed description of the item (p), the game that the item is from (p), and an image (img)
+
+## State
+
+​N/A
+
+## Events (anything that happens via JS when the user interacts with your site)
+
+-   Load
+    -   fetch function for Zelda Item supabase database
+        -   client is created for supabase
+        -   create a response variable that awaits all the variables in the table
+        -   return the response data to the variable that called the fetch
+    -   for loop goes through every piece of data in the item's variable
+        -   Item element is set to render function
+        -   render function creates elements for specific image and name to display
+        -   appends elements to a div
+        -   returns div to the Item element
+        -   appends Item element to the Item list and repeat
+-   Item Link
+    -   second description page is loaded
+    -   second page loads event listener
+        -   fetch function for finding a Item by id is called
+        -   create a response variable that awaits the table data matching the id of the Item
+        -   returns response data to the function call
+        -   render function creates all of the elements in the data table
+
+-   Home Button
+    -   Returns to home page with the Items loaded
+
+## Functions
+
+### Render Functions
+
+-   renderItems function- creates elements and displays all of the Items in the database.
+-   renderItemInfo function - creates elements and displays all of the info of a specific Item by ID
+
+### Display functions
+
+-   displayItems function - for loop that calls the render Items function and uses the returned data to append an element to the displayList div
+
+### Fetch Functions
+
+-   fetchItems function- grabs the data from supabase and returns all of the rows
+
+-   fetchItemsDescription - grabs and returns ALL of the data from ONE specific Item by ID to display on the second page
+    ​
+
+## Slices​
+
+1. Create second page files and write HTML to both pages
+2. Mess with some CSS styling by hard coding some divs, delete after push
+3. On load on the home page, see a list of Items, fetched from supabase
+4. On clicking a Item, user should be taken to that Items’s detail page.
+5. Detail page should get the id from the URL and use that id to fetch that Item from supabase.
+6. Detail page should show the user details about the Item with more details than on the list page
