@@ -10,7 +10,6 @@ export async function getAllItems() {
 }
 
 // grabs item ID
-
 export async function getItem(id){
     const response = await client.from('zelda-items').select().match({ id: id }).single();
     return response.data;
