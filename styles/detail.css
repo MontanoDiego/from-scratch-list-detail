@@ -53,8 +53,7 @@ div {
 
 
 img {
-    width: 400px;
-    max-height: 400px;
+    width: fit-content;
     border: solid 5px rgb(255,215,0);
 }
 
@@ -64,4 +63,10 @@ h3 {
 
 p {
     width: 50rem;
+}
+
+#icon {
+    justify-content: left;
+    width: 50px !important;
+    height: 50px !important;
 }

@@ -28,7 +28,7 @@ export function renderItemDetails(e) {
     const descriptionEl = document.createElement('p');
 
     imgEl.src = e.img;
-    appearanceEl.textContent = e.firstAppearance;
+    appearanceEl.textContent = `First Appearance: ${e.firstAppearance}`;
     descriptionEl.textContent = e.description;
     itemSpan.textContent = ` ${e.name}`;
 
