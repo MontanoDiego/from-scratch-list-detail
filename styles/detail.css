@@ -32,54 +32,41 @@ main {
     padding: 20px;
 }
 
-.home-img {
-    width: 150px;
-    height: 150px;
+#item-span {
+    color: red;
 }
 
-.detail-img {
-    width: fit-content;
-    height: fit-content;
-}
-
-#item-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    padding: 50px;
-}
-
-#item-list-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
-    justify-content: flex-start;
-    padding: 100px;
-}
-
-.item-card {
-    color: rgb(255, 0, 0);
-    font-size: 2rem;
-    padding: 10px;
-    margin: 10px;
+.subtitle {
     text-align: center;
+    border: solid 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    justify-content: center;
+}
+
+
+img {
+    width: fit-content;
     border: solid 5px rgb(255,215,0);
-    width: 300px;
-    height: 300px;
-    cursor: pointer;
+}
+
+h3 {
+    display: true;
+}
+
+p {
+    width: 50rem;
 }
 
 #icon {
     justify-content: left;
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
 }
