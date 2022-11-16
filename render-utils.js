@@ -21,21 +21,21 @@ export function renderItem(i) {
 // render detail page elements
 
 export function renderItemDetails(e) {
+    const itemSpan = document.getElementById('item-span');
     const itemDetailEl = document.createElement('div');
-    const nameEl = document.createElement('h2');
     const imgEl = document.createElement('img');
     const appearanceEl = document.createElement('h3');
     const descriptionEl = document.createElement('p');
 
-    nameEl.textContent = e.name;
     imgEl.src = e.img;
     appearanceEl.textContent = e.firstAppearance;
     descriptionEl.textContent = e.description;
+    itemSpan.textContent = ` ${e.name}`;
 
 
 
     imgEl.classList.add('detail-img');
 
-    itemDetailEl.append(nameEl, imgEl, appearanceEl, descriptionEl);
+    itemDetailEl.append(imgEl, appearanceEl, descriptionEl);
     return itemDetailEl;
 }
