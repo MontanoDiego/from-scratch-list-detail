@@ -2,7 +2,7 @@
 
 export function renderItem(i) {
     const itemEl = document.createElement('a');
-    itemEl.href = `./game/?id=${i.id}`;
+    itemEl.href = `./details/?id=${i.id}`;
     itemEl.classList.add('item-card');
 
     const nameEl = document.createElement('h3');
@@ -10,9 +10,19 @@ export function renderItem(i) {
     nameEl.classList.add('item-name');
 
     const imgEl = document.createElement('img');
+    imgEl.classList.add('home-img');
     imgEl.src = i.img;
 
     itemEl.append(nameEl, imgEl);
     
     return itemEl;
+}
+
+// render detail page elements
+
+export function renderItemDetails(i) {
+    const imgEl = document.createElement('img');
+    imgEl.classList.add('detail-img');
+    imgEl.src = i.img;
+
 }
