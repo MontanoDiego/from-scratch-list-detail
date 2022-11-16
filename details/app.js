@@ -14,8 +14,6 @@ window.addEventListener('load', async () => {
 
     const item = await getItem(id);
 
-    // need finish render item details
     const itemDetailEl = renderItemDetails(item);
     itemDetailContainer.append(itemDetailEl);
-
 });

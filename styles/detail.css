@@ -10,7 +10,7 @@ body {
     background: var(--background);
     display: grid;
     grid-template-rows: auto 1fr;
-    background-image: url('../assets/background.PNG');
+    /* background-image: url('../assets/background.PNG'); */
 }
 
 header {
